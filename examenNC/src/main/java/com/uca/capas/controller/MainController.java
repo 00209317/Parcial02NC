@@ -41,7 +41,7 @@ public class MainController {
 		List<Libro> libros = libroDAO.findAll(); 
 		//Importancia importancias = importanciaDao.findOne(2);
 		try {
-			mav.addObject("libro", libros);
+			mav.addObject("libros", libros);
 		}
 		catch(Exception e){
 			e.printStackTrace();
@@ -73,6 +73,7 @@ public class MainController {
 		else {
 			System.out.println("Estoy aqui");
 			cateDAO.save(categoria);
+			mav.addObject("exito", "La categoria fue guardada con exito");
 			mav.setViewName("index");
 		}	
 		return mav;
@@ -107,6 +108,7 @@ public class MainController {
 		else {
 			System.out.println("Estoy aqui");
 			libroDAO.save(libro);
+			mav.addObject("exito", "El libro fue guardado con exito");
 			mav.setViewName("index");
 		}	
 		return mav;
