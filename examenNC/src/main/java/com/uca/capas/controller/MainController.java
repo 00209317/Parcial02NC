@@ -64,8 +64,8 @@ public class MainController {
 	public ModelAndView guardar(@Valid @ModelAttribute Categoria categoria, BindingResult result) {
 		ModelAndView mav = new ModelAndView();
 		Categoria categoria1 = new Categoria();
-		mav.addObject("categoria", categoria1);
-		mav.setViewName("ingresarCategoria");
+		//mav.addObject("categoria", categoria1);
+		//mav.setViewName("ingresarCategoria");
 		if(result.hasErrors()) {
 			mav.setViewName("ingresarCategoria");
 			System.out.println("Entre aqui pq tengo errores");
@@ -95,12 +95,12 @@ public class MainController {
 		ModelAndView mav = new ModelAndView();
 		Libro libro1 = new Libro();
 		Categoria categoria = new Categoria();
-		mav.addObject("libro", libro1);
+		//mav.addObject("libro", libro1);
 		List<Categoria> categorias = null;
 		categorias = cateDAO.findAll();
 		mav.addObject("categoria", libro1.getCategoria());
 		mav.addObject("categorias", categorias);
-		mav.setViewName("ingresarLibro");
+		//mav.setViewName("ingresarLibro");
 		if(result.hasErrors()) {
 			mav.setViewName("ingresarLibro");
 			System.out.println("Entre aqui pq tengo errores");
