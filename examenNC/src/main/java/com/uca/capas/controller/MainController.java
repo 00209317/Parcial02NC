@@ -51,19 +51,19 @@ public class MainController {
 		return mav;
 	}
 	
-	/*@RequestMapping("/guardarCategoria")
+	@RequestMapping("/guardarCategoria")
 	public ModelAndView guardarCategoriaIndex() {
 		ModelAndView mav = new ModelAndView();
 		Categoria categoria = new Categoria();
 		mav.addObject("categoria", categoria);
 		mav.setViewName("ingresarCategoria");
 		return mav;		
-	}*/
+	}
 	
 	@RequestMapping("/ingresarCategoria")
 	public ModelAndView guardar(@Valid @ModelAttribute Categoria categoria, BindingResult result) {
 		ModelAndView mav = new ModelAndView();
-		Categoria categoria1 = new Categoria();
+		//Categoria categoria1 = new Categoria();
 		//mav.addObject("categoria", categoria1);
 		//mav.setViewName("ingresarCategoria");
 		if(result.hasErrors()) {
@@ -79,7 +79,7 @@ public class MainController {
 		return mav;
 	}
 	
-	/*@RequestMapping("/guardarLibro")
+	@RequestMapping("/guardarLibro")
 	public ModelAndView guardarLibroIndex() {
 		ModelAndView mav = new ModelAndView();
 		Libro libro = new Libro();
@@ -88,13 +88,13 @@ public class MainController {
 		mav.addObject("libro", libro);
 		mav.setViewName("ingresarLibro");
 		return mav;		
-	}*/
+	}
 	
 	@RequestMapping("/ingresarLibro")
 	public ModelAndView guardarLibro(@Valid @ModelAttribute Libro libro, BindingResult result) {
 		ModelAndView mav = new ModelAndView();
 		Libro libro1 = new Libro();
-		Categoria categoria = new Categoria();
+		//Categoria categoria = new Categoria();
 		//mav.addObject("libro", libro1);
 		List<Categoria> categorias = null;
 		categorias = cateDAO.findAll();
