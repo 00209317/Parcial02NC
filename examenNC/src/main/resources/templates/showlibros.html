@@ -27,14 +27,14 @@
 					<td th:text="${v.s_autor}"></td>
 					<td th:text="${v.s_isbn}"></td>
 					<td th:text="${v.categoria.s_categoria}"></td>					
-					<td th:text="${v.f_ingreso}"></td>
+					<td th:text="${#temporals.format(v.f_ingreso, 'dd-MM-yyyy hh:mm a')}"></td>
 					<td th:text="${v.b_estado}"></td>
 				</tr>
 			</th:block> 
 		</tbody>
 	</table>
 	<form method="get" th:action="@{/inicio}"> 
-  	<input type="submit" value="Regresar">
+  	<input type="submit" class="btn btn-primary" value="Regresar">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>  
 </body>

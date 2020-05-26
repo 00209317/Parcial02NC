@@ -40,8 +40,8 @@ public class Libro {
 	private Integer c_categoria;*/
 	
 	@Column(name="f_ingreso")
-	@CreationTimestamp
 	@DateTimeFormat(pattern="dd/MM/yyyy hh:mm")
+	@CreationTimestamp	
 	private LocalDate f_ingreso;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
@@ -89,6 +89,7 @@ public class Libro {
 		this.c_categoria = c_categoria;
 	}*/
 
+	@DateTimeFormat(pattern="dd/MM/yyyy hh:mm")
 	public LocalDate getF_ingreso() {
 		return f_ingreso;
 	}
