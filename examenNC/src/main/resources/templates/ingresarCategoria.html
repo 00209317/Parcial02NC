@@ -16,7 +16,7 @@
   <form th:action="@{/ingresarCategoria}"	th:object="${categoria}" method="post">
     <div class="form-group">
       <label >Nombre Categoría:</label>
-      <input type="text" th:field="*{s_categoria}" class="form-control"  placeholder="Ingrese categoría">
+      <input type="text" th:field="*{s_categoria}" class="form-control"  placeholder="Ingrese categoría"><br>
 	  <span th:errors="*{s_categoria}" style="color: #E81505"></span>	    
     </div>
     

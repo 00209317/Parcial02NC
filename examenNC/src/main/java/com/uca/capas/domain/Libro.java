@@ -1,6 +1,7 @@
 package com.uca.capas.domain;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -42,7 +43,7 @@ public class Libro {
 	@Column(name="f_ingreso")
 	@DateTimeFormat(pattern="dd/MM/yyyy hh:mm")
 	@CreationTimestamp	
-	private LocalDate f_ingreso;
+	private LocalDateTime f_ingreso;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "c_categoria")
@@ -90,11 +91,11 @@ public class Libro {
 	}*/
 
 	@DateTimeFormat(pattern="dd/MM/yyyy hh:mm")
-	public LocalDate getF_ingreso() {
+	public LocalDateTime getF_ingreso() {
 		return f_ingreso;
 	}
 
-	public void setF_ingreso(LocalDate f_ingreso) {
+	public void setF_ingreso(LocalDateTime f_ingreso) {
 		this.f_ingreso = f_ingreso;
 	}
 
